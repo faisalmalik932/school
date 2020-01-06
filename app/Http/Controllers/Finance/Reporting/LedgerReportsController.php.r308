@@ -1,0 +1,47 @@
+<?php
+/**
+ * Created by IntelliJ IDEA.
+ * User: PHP Developer
+ * Date: 10/30/2017
+ * Time: 11:17 AM
+ */
+
+namespace App\Http\Controllers\Finance\Reporting;
+
+
+use App\Http\Controllers\BaseController;
+use App\Models\Finance\Vouchers\CreateVoucherModel;
+use App\Vos\FinanceVOS\Settings\AccountHeadVO;
+use Illuminate\Http\Request;
+use PDF;
+
+class LedgerReportsController extends BaseController
+{
+    public function loadLedgerView()
+    {
+        return view('Finance.Reporting.GeneralLedgerReports.searchLedger');
+    }
+
+    public function ledgerPeriodWisePDF(Request $request)
+    {
+        $accountHeadVO = new AccountHeadVO();
+        $voucherModel  = new CreateVoucherModel();
+        $startdate = $request->input('startdate');
+        $enddate = $request->input('enddate');
+        $accountHeadVO->setFromaccounthead($request->input('fromaccountheads'));
+        $accountHeadVO->setToaccounthead($request->input('toaccountheads'));
+        $accountHeadVO->setStartdate($request->input('startdate'));
+        $accountHeadVO->setEnddate($request->input('enddate'));
+        $ledger = $voucherModel->getLedgerPeriodWise($accountHeadVO);
+        $debitbalance = $voucherModel->getDebitBalance($accountHeadVO);
+        $creditbalance = $voucherModel->getCreditBalance($accountHeadVO);
+        $totalbalance = $voucherModel->gettotalbalance($accountHeadVO);
+        echo($debitbalance);
+        //echo ($totalbalance);
+      /*$pdf = PDF::loadview('Finance.Reporting.GeneralLedgerReports.generalLedgerReport',
+            compact('ledger','startdate','enddate','totalbalance','debitbalance','creditbalance'))
+            ->setPaper('a4', 'portrait');
+        return $pdf->stream('Finance.Reporting.GeneralLedgerReports.generalLedgerReport');*/
+    }
+
+}

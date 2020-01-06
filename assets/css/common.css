@@ -1,0 +1,6 @@
+#datatable tbody tr {
+    cursor: pointer !important;
+}
+.form-group .required .control-label:after {
+    content:"*";color:red;
+}

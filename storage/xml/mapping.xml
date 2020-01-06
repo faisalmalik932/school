@@ -1,0 +1,1638 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pages>
+    <page codename="VOUCHERSHEAD" viewname="fin_voucher_heads_vw" tablename="fin_voucher_heads">
+        <primary>VOUCHER_HEAD_ID</primary>
+        <fields>
+            <field id="voucherheader">VOUCHER_HEAD_NAME</field>
+            <field id="glaccount">ACCOUNT_HEAD_ID</field>
+            <field id="vouchertype">VOUCHER_TYPE</field>
+            <field id="voucherstatus">STATUS</field>
+        </fields>
+        <datatable viewname="fin_voucher_heads_vw">
+            <options>
+                <title>Voucher head</title>
+            </options>
+            <header>
+                <title>VOUCHER_HEAD_ID</title>
+                <title>Voucher Head</title>
+                <title>Voucher Type</title>
+                <title>GL Account</title>
+                <title>GL Account Code</title>
+                <title>Status</title>
+            </header>
+            <body>
+                <column>VOUCHER_HEAD_ID as DT_RowId</column>
+                <column>VOUCHER_HEAD_NAME</column>
+                <column>VOUCHER_TYPE</column>
+                <column>ACCOUNT_HEADS</column>
+                <column>ACCOUNT_HEAD_NUMBER</column>
+                <column>STATUS</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="CITY" viewname="ptf_loc_cities" tablename="ptf_loc_cities">
+        <primary>CITY_ID</primary>
+        <fields>
+            <field id="country">COUNTRY_ID</field>
+            <field id="states">STATE_ID</field>
+            <field id="city">CITY_NAME</field>
+            <field id="description">DESCRIPTION</field>
+        </fields>
+        <datatable viewname="ptf_loc_cities_vw">
+            <options>
+                <title>City List</title>
+            </options>
+            <header>
+                <title>City Id</title>
+                <title>Country</title>
+                <title>State</title>
+                <title>City Name</title>
+                <title>Description</title>
+            </header>
+            <body>
+                <column>CITY_ID as DT_RowId</column>
+                <column>COUNTRY_NAME</column>
+                <column>STATE_NAME</column>
+                <column>CITY_NAME</column>
+                <column>DESCRIPTION</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="STATES" viewname="ptf_loc_states" tablename="ptf_loc_states">
+        <primary>STATE_ID</primary>
+        <fields>
+            <field id="country">COUNTRY_ID</field>
+            <field id="state">STATE_NAME</field>
+            <field id="statecode">STATE_CODE</field>
+            <field id="description">DESCRIPTION</field>
+        </fields>
+        <datatable viewname="ptf_loc_states_vw">
+            <options>
+                <title>STATE List</title>
+            </options>
+            <header>
+                <title>State Id</title>
+                <title>Country</title>
+                <title>State</title>
+                <title>Code</title>
+                <title>Description</title>
+            </header>
+            <body>
+                <column>STATE_ID as DT_RowId</column>
+                <column>COUNTRY_NAME</column>
+                <column>STATE_NAME</column>
+                <column>STATE_CODE</column>
+                <column>DESCRIPTION</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="JOBCATEGORY" viewname="hrm_job_categories" tablename="hrm_job_categories">
+        <primary>JOB_CATEGORY_ID</primary>
+        <fields>
+            <field id="jobCategory">JOB_CATEGORY_NAME</field>
+            <field id="description">DESCRIPTION</field>
+        </fields>
+        <datatable viewname="hrm_job_categories">
+            <options>
+                <title>Job Categories</title>
+            </options>
+            <header>
+                <title>Job Category Id</title>
+                <title>Job Category</title>
+                <title>Description</title>
+            </header>
+            <body>
+                <column>JOB_CATEGORY_ID as DT_RowId</column>
+                <column>JOB_CATEGORY_NAME</column>
+                <column>DESCRIPTION</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="JOBTITLE" viewname="hrm_job_title_vw" tablename="hrm_job_titles">
+        <primary>TITLE_ID</primary>
+        <fields>
+            <field id="jobtitle">TITLE_NAME</field>
+            <field id="department">DEPARTMENT_ID</field>
+            <field id="description">DESCRIPTION</field>
+        </fields>
+        <datatable viewname="hrm_job_title_vw">
+            <options>
+                <title>Job Titles</title>
+            </options>
+            <header>
+                <title>Job Title Id</title>
+                <title>Department</title>
+                <title>Job Category</title>
+                <title>Job Title</title>
+                <title>Description</title>
+            </header>
+            <body>
+                <column>TITLE_ID as DT_RowId</column>
+                <column>DEPARTMENT_NAME</column>
+                <column>JOB_CATEGORY_NAME</column>
+                <column>TITLE_NAME</column>
+                <column>DESCRIPTION</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="EMPLOYMENT-STATUS" viewname="hrm_job_status_vw" tablename="hrm_job_status">
+        <primary>JOB_STATUS_ID</primary>
+        <fields>
+            <field id="jobstatus">JOB_STATUS_NAME</field>
+            <field id="description">DESCRIPTION</field>
+        </fields>
+        <datatable viewname="hrm_job_status_vw">
+            <options>
+                <title>Employment Status</title>
+            </options>
+            <header>
+                <title>Employment Status Id</title>
+                <title>Employment Status</title>
+                <title>Description</title>
+            </header>
+            <body>
+                <column>JOB_STATUS_ID as DT_RowId</column>
+                <column>JOB_STATUS_NAME</column>
+                <column>DESCRIPTION</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="BRANCHES" viewname="ptf_branches" tablename="ptf_branches">
+        <primary>BRANCH_ID</primary>
+        <fields>
+            <field id="branchName">BRANCH_NAME</field>
+            <field id="branchcode">BRANCH_CODE</field>
+            <field id="stateId">STATE_ID</field>
+            <field id="cityId">CITY_ID</field>
+            <field id="address">ADDRESS</field>
+            <field id="landLine">LANDLINE_NUMBER</field>
+            <field id="faxNumber">FAX_NUMBER</field>
+            <field id="email">EMAIL</field>
+            <field id="branchType">BRANCH_TYPE</field>
+            <field id="branchLevel">BRANCH_LEVEL</field>
+            <field id="description">DESCRIPTION</field>
+            <field id="registerDate">REGISTERED_DATE</field>
+            <field id="status">STATUS</field>
+            <field id="latefine">LATE_FEE_FINE</field>
+        </fields>
+        <datatable viewname="ptf_branches_vw">
+            <options>
+                <title>Branch List</title>
+            </options>
+            <header>
+                <title>Branch Id</title>
+                <title>Branch Code</title>
+                <title>Branch Name</title>
+                <title>State</title>
+                <title>City</title>
+                <title>Address</title>
+                <title>LandLine</title>
+                <title>Branch Type</title>
+                <title>Late Fee Fine</title>
+            </header>
+            <body>
+                <column>BRANCH_ID as DT_RowId</column>
+                <column>BRANCH_CODE</column>
+                <column>BRANCH_NAME</column>
+                <column>STATE_NAME</column>
+                <column>CITY_NAME</column>
+                <column>ADDRESS</column>
+                <column>LANDLINE_NUMBER</column>
+                <column>BRANCH_TYPE</column>
+                <column>LATE_FEE_FINE</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="EMPLOYEES" viewname="hrm_employees_vw" tablename="hrm_employees_info">
+        <primary>EMPLOYEE_ID</primary>
+        <fields>
+            <field id="fullName">FULL_NAME</field>
+            <field id="fatherName">FATHER_NAME</field>
+            <field id="currentAdd">CURRENT_ADDRESS</field>
+            <field id="code">EMPLOYEE_CODE</field>
+            <field id="permanentAdd">PERMANENT_ADDRESS</field>
+            <field id="mobileNumb">MOBILE_NUMBER</field>
+            <field id="branchID">BRANCH_ID</field>
+            <field id="homeNumb">HOME_NUMBER</field>
+            <field id="gender">GENDER</field>
+            <field id="birth">DOB</field>
+            <field id="PerEmail">PERSONAL_EMAIL</field>
+            <field id="OffEmail">OFFICIAL_EMAIL</field>
+            <field id="cnic">CNIC</field>
+            <field id="designation">TITLE_ID</field>
+            <field id="empPic">EMP_PICTURE</field>
+            <field id="status">STATUS</field>
+            <field id="salary">EMPLOYEE_SALARY</field>
+            <field id="jobStatus">JOB_STATUS_ID</field>
+            <field id="department">DEPARTMENT_ID</field>
+            <field id="employeetype">TITLE_NAME</field>
+            <field id="joinDate">JOINING_DATE</field>
+            <field id="refName">REFERENCE_NAME</field>
+            <field id="termination_type">TERMINATION_TYPE</field>
+            <field id="termination_reason">TERMINATION_REASON</field>
+            <field id="termination_date">TERMINATION_DATE</field>
+        </fields>
+        <datatable viewname="hrm_employees_vw">
+            <options>
+                <title>Employees</title>
+            </options>
+            <header>
+                <title>Employee_Id</title>
+                <title>Employee Name</title>
+                <title>Father Name</title>
+                <title>Current Address</title>
+                <title>Mobile Number</title>
+                <title>Personal Email</title>
+                <title>CNIC</title>
+                <title>Joining Date</title>
+                <title>Department</title>
+                <title>Job Title</title>
+                <title>Status</title>
+            </header>
+            <body>
+                <column>EMPLOYEE_ID as DT_RowId</column>
+                <column>FULL_NAME</column>
+                <column>FATHER_NAME</column>
+                <column>CURRENT_ADDRESS</column>
+                <column>MOBILE_NUMBER</column>
+                <column>PERSONAL_EMAIL</column>
+                <column>CNIC</column>
+                <column>JOINING_DATE</column>
+                <column>DEPARTMENT_NAME</column>
+                <column>TITLE_NAME</column>
+                <column>STATUS</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="STUDENTS" viewname="adc_students_info_vw" tablename="adc_students">
+        <primary>STUDENT_ID</primary>
+        <fields>
+            <field id="fullName">STUDENT_NAME</field>
+            <field id="rollNo">ROLL_NO</field>
+            <field id="stdCode">STUDENT_CODE</field>
+            <field id="branchId">BRANCH_ID</field>
+            <field id="class">CLASS</field>
+            <field id="section">SECTION_NAME</field>
+            <field id="states">STATE_ID</field>
+            <field id="city">CITY_ID</field>
+            <field id="gender">GENDER</field>
+            <field id="religion">RELIGION</field>
+            <field id="bayform">BAYFORM_NO</field>
+            <field id="Pic">PICTURE</field>
+            <field id="concession">CONCESSION</field>
+            <field id="emgPerName">EMG_PERSON_NAME</field>
+            <field id="emgRelation">EMG_RELATION</field>
+            <field id="emgMobile">EMG_MOBILE_NUMBER</field>
+            <field id="emgLandline">EMG_LANDLINE</field>
+            <field id="emgAddress">EMG_ADDRESS</field>
+            <field id="birthDate">BIRTH_DATE</field>
+            <field id="birthPlace">BIRTH_PLACE</field>
+            <field id="currentAddress">CURRENT_ADDRESS</field>
+            <field id="permanentAddress">PERMANENT_ADDRESS</field>
+            <field id="nationality">NATIONALITY</field>
+            <field id="registerDate">REGISTRATION_DATE</field>
+            <field id="hostel">HOSTEL_ID</field>
+            <field id="status">STATUS</field>
+            <field id="guardianId">GUARDIAN_ID</field>
+            <field id="guardianfullname">FULL_NAME</field>
+            <field id="cnic">CNIC</field>
+            <field id="email">EMAIL</field>
+            <field id="relation">RELATION</field>
+            <field id="cellphone">CELL_PHONE</field>
+            <field id="landline">LANDLINE_NUMBER</field>
+            <field id="guardianOccupation">OCCUPATION</field>
+            <field id="jobtitle">JOB_TITLE</field>
+            <field id="businessname">BUSINESS_NAME</field>
+            <field id="businessaddress">BUSINESS_ADDRESS</field>
+        </fields>
+        <datatable viewname="adc_students_info_vw">
+            <options>
+                <title>Students</title>
+            </options>
+            <header>
+                <title>STUDENT_ID</title>
+                <title>Branch</title>
+                <title>Student Code</title>
+                <title>Roll Number</title>
+                <title>Student Name</title>
+                <title>Father/Mother</title>
+                <title>CNIC</title>
+                <title>Class</title>
+                <title>Section</title>
+                <title>Concession</title>
+                <title>Status</title>
+            </header>
+            <body>
+                <column>STUDENT_ID as DT_RowId</column>
+                <column>BRANCH_NAME</column>
+                <column>STUDENT_CODE</column>
+                <column>ROLL_NO</column>
+                <column>STUDENT_NAME</column>
+                <column>FULL_NAME</column>
+                <column>CNIC</column>
+                <column>CLASS</column>
+                <column>SECTION_NAME</column>
+                <column>CONCESSION</column>
+                <column>STATUS</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="DONORS" viewname="adc_donors" tablename="adc_donors">
+        <primary>DONOR_ID</primary>
+        <fields>
+            <field id="donorname">DONOR_NAME</field>
+            <field id="gender">GENDER</field>
+            <field id="countryId">COUNTRY_ID</field>
+            <field id="states">STATE_ID</field>
+            <field id="city">CITY_ID</field>
+            <field id="branch">BRANCH_ID</field>
+            <field id="class">CLASS_ID</field>
+            <field id="student">STUDENT_ID</field>
+            <field id="zipcode">ZIP_CODE</field>
+            <field id="cellphone">CELL_PHONE</field>
+            <field id="email">EMAIL</field>
+            <field id="nicNo">NIC_NO</field>
+            <field id="address">ADDRESS</field>
+            <field id="donortype">DONOR_TYPE</field>
+            <field id="donorCategory">DONOR_CATEGORY</field>
+            <field id="emgcontactname">EMG_CONTACT_NAME</field>
+            <field id="emgcontactnumber">EMG_CONTACT_NO</field>
+        </fields>
+        <datatable viewname="adc_donors_vw">
+            <options>
+                <title>DONORS</title>
+            </options>
+            <header>
+                <title>Donor_ID</title>
+                <title>Donor Name</title>
+                <title>Gender</title>
+                <title>Country</title>
+                <title>State</title>
+                <title>CITY</title>
+                <title>NIC</title>
+                <title>Cell Phone</title>
+                <title>Email</title>
+                <title>Address</title>
+                <title>Donor Type</title>
+                <title>Donor Category</title>
+            </header>
+            <body>
+                <column>DONOR_ID as DT_RowId</column>
+                <column>DONOR_NAME</column>
+                <column>GENDER</column>
+                <column>COUNTRY_NAME</column>
+                <column>STATE_NAME</column>
+                <column>CITY_NAME</column>
+                <column>NIC_NO</column>
+                <column>CELL_PHONE</column>
+                <column>EMAIL</column>
+                <column>ADDRESS</column>
+                <column>DONOR_TYPE</column>
+                <column>DONOR_CATEGORY</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="HOSTELS" viewname="ptf_hostels_vw" tablename="ptf_hostels">
+        <primary>HOSTEL_ID</primary>
+        <fields>
+            <field id="hostelname">HOSTEL_NAME</field>
+            <field id="address">ADDRESS</field>
+            <field id="branchId">BRANCH_ID</field>
+            <field id="manager">HOSTEL_MANAGER</field>
+            <field id="states">STATE_ID</field>
+            <field id="city">CITY_ID</field>
+            <field id="hosteltype">HOSTEL_TYPE</field>
+        </fields>
+        <datatable viewname="ptf_hostels_vw">
+            <options>
+                <title>Hostels</title>
+            </options>
+            <header>
+                <title>HOSTEL_ID</title>
+                <title>Hostel Name</title>
+                <title>Address</title>
+                <title>Hostel InCharge</title>
+                <title>Hostel Type</title>
+            </header>
+            <body>
+                <column>HOSTEL_ID as DT_RowId</column>
+                <column>HOSTEL_NAME</column>
+                <column>ADDRESS</column>
+                <column>HOSTEL_MANAGER</column>
+                <column>HOSTEL_TYPE</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="FEECATEGORIES" viewname="fin_fee_challan_categories_vw" tablename="fin_fee_challan_categories_vw">
+        <primary>FEE_CATEGORY_ID</primary>
+        <fields>
+            <field id="categoryName">CATEGORY_NAME</field>
+            <field id="description">DESCRIPTION</field>
+            <field id="feeheader">FEE_CATEGORY_TYPE</field>
+        </fields>
+        <datatable viewname="fin_fee_challan_categories_vw">
+            <options>
+                <title>Fee Categories</title>
+            </options>
+            <header>
+                <title>CATEGORY ID</title>
+                <title>Fee Header</title>
+                <title>Category Name</title>
+                <title>Description</title>
+            </header>
+            <body>
+                <column>FEE_CATEGORY_ID as DT_RowId</column>
+                <column>FEE_CATEGORY_TYPE</column>
+                <column>CATEGORY_NAME</column>
+                <column>DESCRIPTION</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="FEEPARTICULARS" viewname="fin_fee_particular_vw" tablename="fin_fee_particular_vw">
+        <primary>FEE_PARTICULAR_ID</primary>
+        <fields>
+            <field id="particularName">PARTICULAR_NAME</field>
+            <field id="description">DESCRIPTION</field>
+            <field id="category">FEE_CATEGORY_ID</field>
+            <field id="feeheader">FEE_CATEGORY_TYPE</field>
+        </fields>
+        <datatable viewname="fin_fee_particular_vw">
+            <options>
+                <title>Fee particulars</title>
+            </options>
+            <header>
+                <title>Particular ID</title>
+                <title>Fee Category Type</title>
+                <title>Category Name</title>
+                <title>Particular Name</title>
+            </header>
+            <body>
+                <column>FEE_PARTICULAR_ID as DT_RowId</column>
+                <column>FEE_CATEGORY_TYPE</column>
+                <column>CATEGORY_NAME</column>
+                <column>PARTICULAR_NAME</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="FEEDISCOUNTS" viewname="fin_fee_discounts" tablename="fin_fee_discounts">
+        <primary>DISCOUNT_ID</primary>
+        <fields>
+            <field id="discountname">DISCOUNT_NAME</field>
+            <field id="amount">AMOUNT</field>
+        </fields>
+        <datatable viewname="fin_fee_discounts">
+            <options>
+                <title>Fee Discounts</title>
+            </options>
+            <header>
+                <title>Discount ID</title>
+                <title>Discount Name</title>
+                <title>Amount</title>
+            </header>
+            <body>
+                <column>DISCOUNT_ID as DT_RowId</column>
+                <column>DISCOUNT_NAME</column>
+                <column>AMOUNT</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="FEEFINES" viewname="fin_fee_fines" tablename="fin_fee_fines">
+        <primary>FINE_ID</primary>
+        <fields>
+            <field id="finename">FINE_NAME</field>
+            <field id="amount">FINE_VALUE</field>
+            <field id="duedate">DAYS</field>
+        </fields>
+        <datatable viewname="fin_fee_fines">
+            <options>
+                <title>Fee Fines</title>
+            </options>
+            <header>
+                <title>Fine ID</title>
+                <title>Fine Name</title>
+                <title>Amount</title>
+                <title>Due Days</title>
+            </header>
+            <body>
+                <column>FINE_ID as DT_RowId</column>
+                <column>FINE_NAME</column>
+                <column>FINE_VALUE</column>
+                <column>DAYS</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="DEPARTMENTS" viewname="hrm_departments_vw" tablename="hrm_departments">
+        <primary>DEPARTMENT_ID</primary>
+        <fields>
+            <field id="departmentname">DEPARTMENT_NAME</field>
+            <field id="description">DESCRIPTION</field>
+            <field id="branchID">BRANCH_ID</field>
+            <field id="departmenttype">EMPLOYEE_TYPE</field>
+        </fields>
+        <datatable viewname="hrm_departments_vw">
+            <options>
+                <title>Departments</title>
+            </options>
+            <header>
+                <title>Department ID</title>
+                <title>Department Type</title>
+                <title>Department Name</title>
+                <title>Description</title>
+                <title>Branch</title>
+            </header>
+            <body>
+                <column>DEPARTMENT_ID as DT_RowId</column>
+                <column>EMPLOYEE_TYPE</column>
+                <column>DEPARTMENT_NAME</column>
+                <column>DESCRIPTION</column>
+                <column>BRANCH_NAME</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="EXPENSES" viewname="fin_expenses" tablename="fin_expenses">
+        <primary>EXPENSE_ID</primary>
+        <fields>
+            <field id="title">TITLE</field>
+            <field id="description">DESCRIPTION</field>
+            <field id="amount">AMOUNT</field>
+            <field id="date">DATE</field>
+            <field id="category">ACCOUNT_HEAD_ID</field>
+        </fields>
+        <datatable viewname="fin_expense_vw">
+            <options>
+                <title>Finance Expenses</title>
+            </options>
+            <header>
+                <title>ID</title>
+                <title>Account Head</title>
+                <title>Title</title>
+                <title>Description</title>
+                <title>Amount</title>
+                <title>Date</title>
+            </header>
+            <body>
+                <column>EXPENSE_ID as DT_RowId</column>
+                <column>ACCOUNT_HEADS</column>
+                <column>TITLE</column>
+                <column>DESCRIPTION</column>
+                <column>AMOUNT</column>
+                <column>DATE</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="INCOME" viewname="fin_income" tablename="fin_income">
+        <primary>INCOME_ID</primary>
+        <fields>
+            <field id="title">TITLE</field>
+            <field id="description">DESCRIPTION</field>
+            <field id="amount">AMOUNT</field>
+            <field id="date">DATE</field>
+            <field id="category">ACCOUNT_HEAD_ID</field>
+        </fields>
+        <datatable viewname="fin_income_vw">
+            <options>
+                <title>Finance Income</title>
+            </options>
+            <header>
+                <title>ID</title>
+                <title>Account Head</title>
+                <title>Title</title>
+                <title>Description</title>
+                <title>Amount</title>
+                <title>Date</title>
+            </header>
+            <body>
+                <column>Income_ID as DT_RowId</column>
+                <column>ACCOUNT_HEADS</column>
+                <column>TITLE</column>
+                <column>DESCRIPTION</column>
+                <column>AMOUNT</column>
+                <column>DATE</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="ACCOUNTHEAD" viewname="fin_gl_accounts" tablename="fin_gl_accounts">
+        <primary>ACCOUNT_HEAD_ID</primary>
+        <fields>
+            <field id="accountClass">CLASS_TYPE</field>
+            <field id="accountheads">ACCOUNT_HEADS</field>
+            <field id="accountcode">ACCOUNT_HEAD_CODE</field>
+            <field id="description">DESCRIPTION</field>
+        </fields>
+        <datatable viewname="fin_gl_accounts_vw">
+            <options>
+                <title>Account Heads</title>
+            </options>
+            <header>
+                <title>SR</title>
+                <title>Account Code</title>
+                <title>Account Head</title>
+                <title>Parent Category</title>
+                <title>Account Class</title>
+            </header>
+            <body>
+                <column>ACCOUNT_HEAD_ID as DT_RowId</column>
+                <column>ACCOUNT_HEAD_CODE</column>
+                <column>ACCOUNT_HEADS</column>
+                <column>PARENT_NAME</column>
+                <column>CLASS_TYPE</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="BANKACCOUNT" viewname="fin_bank_accounts" tablename="fin_bank_accounts">
+        <primary>ACCOUNT_ID</primary>
+        <fields>
+            <field id="accounttitle">BANK_ACCOUNT_TITLE</field>
+            <field id="bankname">BANK_NAME</field>
+            <field id="accountnumber">BANK_ACCOUNT_NO</field>
+            <field id="bankaddress">BANK_ADDRESS</field>
+            <field id="accounttype">ACCOUNT_TYPE</field>
+            <field id="accountcurrency">ACCOUNT_CURRENCY</field>
+            <field id="currencyaccount">DEFAULT_CURRENCY_ACCOUNT</field>
+            <field id="accountcode">GL_CODE</field>
+            <field id="chargesaccount">CHARGES_ACCOUNT</field>
+        </fields>
+        <datatable viewname="fin_bank_accounts_vw">
+            <options>
+                <title>Bank Accounts</title>
+            </options>
+            <header>
+                <title>ID</title>
+                <title>Bank Name</title>
+                <title>Bank Account Title</title>
+                <title>Bank Account No</title>
+                <title>GL Account</title>
+            </header>
+            <body>
+                <column>ACCOUNT_ID as DT_RowId</column>
+                <column>BANK_NAME</column>
+                <column>BANK_ACCOUNT_TITLE</column>
+                <column>BANK_ACCOUNT_NO</column>
+                <column>PARENT_ACCOUNT_NAME</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="SUPPLIERS" viewname="fin_suppliers" tablename="fin_suppliers">
+        <primary>SUPPLIER_ID</primary>
+        <fields>
+            <field id="suppliername">SUPPLIER_NAME</field>
+            <field id="gstnumber">GST_NO</field>
+            <field id="website">WEBSITE</field>
+            <field id="currency">CURRENCY</field>
+            <field id="accountname">BANK_NAME</field>
+            <field id="credit">CREDIT_LIMIT</field>
+            <field id="paymentterm">PAYMENT_TERM</field>
+            <field id="accountpayable">ACCOUNT_PAYABLE_ACCOUNT</field>
+            <field id="purchaseaccount">PURCHASE_ACCOUNT</field>
+            <field id="discountaccount">DISCOUNT_ACCOUNT</field>
+            <field id="contactpersonname">CONTACT_PERSON_NAME</field>
+            <field id="mobilenumber">MOBILE_NO</field>
+            <field id="faxnumber">FAX_NO</field>
+            <field id="email">EMAIL</field>
+            <field id="address">ADDRESS</field>
+            <field id="landline">LANDLINE</field>
+            <field id="accounttitle">BANK_ACCOUNT_TITLE</field>
+            <field id="accountnumber">BANK_ACCOUNT_NUMBER</field>
+        </fields>
+        <datatable viewname="fin_suppliers">
+            <options>
+                <title>Suppliers</title>
+            </options>
+            <header>
+                <title>ID</title>
+                <title>Suppliers Name</title>
+                <title>Website</title>
+                <title>Bank Name</title>
+                <title>Payment Term</title>
+                <title>Payable Account</title>
+                <title>Purchase Account</title>
+                <title>Contact Name</title>
+                <title>Mobile</title>
+                <title>Email</title>
+                <title>Address</title>
+            </header>
+            <body>
+                <column>SUPPLIER_ID as DT_RowId</column>
+                <column>SUPPLIER_NAME</column>
+                <column>WEBSITE</column>
+                <column>BANK_NAME</column>
+                <column>PAYMENT_TERM</column>
+                <column>ACCOUNT_PAYABLE_ACCOUNT</column>
+                <column>PURCHASE_ACCOUNT</column>
+                <column>CONTACT_PERSON_NAME</column>
+                <column>MOBILE_NO</column>
+                <column>EMAIL</column>
+                <column>ADDRESS</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="CURRENCIES" viewname="fin_currencies_vw" tablename="fin_currencies_vw">
+        <primary>CURRENCY_ID</primary>
+        <fields>
+            <field id="abbreviation">CURRENCY_ABBREVIATION</field>
+            <field id="currencysymbol">CURRENCY_SYMBOL</field>
+            <field id="currencyname">CURRENCY_NAME</field>
+            <field id="hundrethsname">HUNDRETHS_NAME</field>
+            <field id="country">COUNTRY_ID</field>
+        </fields>
+        <datatable viewname="fin_currencies_vw">
+            <options>
+                <title>Suppliers</title>
+            </options>
+            <header>
+                <title>ID</title>
+                <title>Currency Abbreviation</title>
+                <title>Currency Symbol</title>
+                <title>Currency Name</title>
+                <title>Hundredths Name</title>
+            </header>
+            <body>
+                <column>CURRENCY_ID as DT_RowId</column>
+                <column>CURRENCY_ABBREVIATION</column>
+                <column>CURRENCY_SYMBOL</column>
+                <column>CURRENCY_NAME</column>
+                <column>HUNDRETHS_NAME</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="SECTIONS" viewname="adc_sections_vw" tablename="adc_sections">
+        <primary>SECTION_ID</primary>
+        <fields>
+            <field id="section">SECTION_NAME</field>
+            <field id="classname">CLASS</field>
+        </fields>
+        <datatable viewname="adc_sections_vw">
+            <options>
+                <title>Sections</title>
+            </options>
+            <header>
+                <title>Section ID</title>
+                <title>CLASS</title>
+                <title>Section Name</title>
+            </header>
+            <body>
+                <column>SECTION_ID as DT_RowId</column>
+                <column>CLASS</column>
+                <column>SECTION_NAME</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="FISCALYEAR" viewname="fin_fiscal_year_vw" tablename="fin_fiscal_year_vw">
+        <primary>FISCAL_YEAR_ID</primary>
+        <fields>
+            <field id="startdate">START_DATE</field>
+            <field id="enddate">END_DATE</field>
+            <field id="status">IS_CLOSED</field>
+        </fields>
+        <datatable viewname="fin_fiscal_year_vw">
+            <options>
+                <title>Fiscal Year</title>
+            </options>
+            <header>
+                <title>Fiscal Year ID</title>
+                <title>Start Date</title>
+                <title>End Date</title>
+                <title>Is Closed</title>
+            </header>
+            <body>
+                <column>FISCAL_YEAR_ID as DT_RowId</column>
+                <column>START_DATE</column>
+                <column>END_DATE</column>
+                <column>IS_CLOSED</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="TAXTYPE" viewname="fin_tax_types" tablename="fin_tax_types">
+        <primary>TAX_ID</primary>
+        <fields>
+            <field id="description">DESCRIPTION</field>
+            <field id="defaultrate">DEFAULT_RATE</field>
+            <field id="salesaccount">SALES_ACCOUNT</field>
+            <field id="purchaseaccount">PURCHASE_ACCOUNT</field>
+        </fields>
+        <datatable viewname="fin_tax_types">
+            <options>
+                <title>Tax Types</title>
+            </options>
+            <header>
+                <title>Tax Type ID</title>
+                <title>Description</title>
+                <title>Sales Account</title>
+                <title>Purchase Account</title>
+                <title>Default Rate</title>
+            </header>
+            <body>
+                <column>TAX_ID as DT_RowId</column>
+                <column>DESCRIPTION</column>
+                <column>SALES_ACCOUNT</column>
+                <column>PURCHASE_ACCOUNT</column>
+                <column>DEFAULT_RATE</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="USERS" viewname="ptf_users_vw" tablename="ptf_users">
+        <primary>USER_ID</primary>
+        <fields>
+            <field id="username">USERNAME</field>
+            <field id="password">PASSWORD</field>
+            <field id="employeename">EMPLOYEE_ID</field>
+            <field id="branchId">BRANCH_ID</field>
+            <field id="status">USER_STATUS</field>
+            <field id="userrole">USER_ROLE_ID</field>
+            <field id="status">ROLE_STATUS</field>
+        </fields>
+        <datatable viewname="ptf_users_vw">
+            <options>
+                <title>Users</title>
+            </options>
+            <header>
+                <title>User ID</title>
+                <title>Employee Name</title>
+                <title>Branch Name</title>
+                <title>User Role</title>
+                <title>Status</title>
+            </header>
+            <body>
+                <column>USER_ID as DT_RowId</column>
+                <column>EMPLOYEE_NAME</column>
+                <column>BRANCH_NAME</column>
+                <column>USER_ROLE_NAME</column>
+                <column>ROLE_STATUS</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="CLASSES" viewname="adc_classes" tablename="adc_classes">
+        <primary>CLASS_ID</primary>
+        <fields>
+            <field id="classname">CLASS_NAME</field>
+            <field id="branchId">BRANCH_ID</field>
+            <field id="states">STATE_ID</field>
+            <field id="city">CITY_ID</field>
+        </fields>
+        <datatable viewname="adc_classes_vw">
+            <options>
+                <title>Classes</title>
+            </options>
+            <header>
+                <title>Class ID</title>
+                <title>State  Name</title>
+                <title>City Name</title>
+                <title>Branch Name</title>
+                <title>Class Name</title>
+            </header>
+            <body>
+                <column>CLASS_ID as DT_RowId</column>
+                <column>STATE_NAME</column>
+                <column>CITY_NAME</column>
+                <column>BRANCH_NAME</column>
+                <column>CLASS_NAME</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="CREATEVOUCHER" viewname="fin_journal_voucher_vw" tablename="fin_journal_voucher_vw">
+        <primary>VOUCHER_HEAD_ID</primary>
+        <fields>
+            <field id="vouncherhead">VOUCHER_HEAD_ID</field>
+            <field id="transactiondate">TRANSACTION_DATE</field>
+            <field id="ledgeraccount">LEDGER_ACCOUNT</field>
+            <field id="debitamount">DEBIT_AMOUNT</field>
+            <field id="creditamount">CREDIT_AMOUNT</field>
+            <field id="transactioncode">TRANSACTION_CODE</field>
+        </fields>
+        <datatable viewname="fin_journal_voucher_vw">
+            <options>
+                <title>Create Voucher</title>
+            </options>
+            <header>
+                
+                <title>Transaction Code Prefix</title>
+                <title>Transaction Code</title>
+                <title>Transaction Date</title>
+                <title>Account Class</title>
+                <title>Ledger Account</title>
+                <title>Debit Amount</title>
+                <title>Credit Amount</title>
+                <title>Memo</title>
+                <title>Action</title>
+            </header>
+            <body>
+                <column>VOUCHER_ID as DT_RowId</column>
+                <column>TRANSACTION_CODE_PREFIX</column>
+                <column>TRANSACTION_CODE</column>
+                <column>TRANSACTION_DATE</column>
+                <column>CLASS_TYPE</column>
+                <column>LEDGER_ACCOUNT_NAME</column>
+                <column>DEBIT_AMOUNT</column>
+                <column>CREDIT_AMOUNT</column>
+                <column>DESCRIPTION</column>
+                
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="CREATEBANKVOUCHER" viewname="fin_journal_voucher_vw" tablename="fin_journal_voucher_vw">
+        <primary>VOUCHER_HEAD_ID</primary>
+        <fields>
+            <field id="vouncherhead">VOUCHER_HEAD_ID</field>
+            <field id="transactiondate">TRANSACTION_DATE</field>
+            <field id="ledgeraccount">LEDGER_ACCOUNT</field>
+            <field id="debitamount">DEBIT_AMOUNT</field>
+            <field id="creditamount">CREDIT_AMOUNT</field>
+            <field id="transactioncode">TRANSACTION_CODE</field>
+        </fields>
+        <datatable viewname="fin_journal_voucher_vw">
+            <options>
+                <title>Create Voucher</title>
+            </options>
+            <header>
+                
+                <title>Transaction Code Prefix</title>
+                <title>Transaction Code</title>
+                <title>Transaction Date</title>
+                <title>Account Class</title>
+                <title>Ledger Account</title>
+                <title>Debit Amount</title>
+                <title>Credit Amount</title>
+                <title>Memo</title>
+                <title>Action</title>
+            </header>
+            <body>
+                <column>VOUCHER_ID as DT_RowId</column>
+                <column>TRANSACTION_CODE_PREFIX</column>
+                <column>TRANSACTION_CODE</column>
+                <column>TRANSACTION_DATE</column>
+                <column>CLASS_TYPE</column>
+                <column>LEDGER_ACCOUNT_NAME</column>
+                <column>DEBIT_AMOUNT</column>
+                <column>CREDIT_AMOUNT</column>
+                <column>DESCRIPTION</column>
+                
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="VOUCHERHEADS" viewname="fin_voucher_heads_vw" tablename="fin_voucher_heads_vw">
+        <primary>VOUCHER_HEAD_ID</primary>
+        <fields>
+            <field id="voucherheader">VOUCHER_HEAD_NAME</field>
+            <field id="vouchertype">VOUCHER_TYPE</field>
+            <field id="glaccount">ACCOUNT_HEAD_ID</field>
+            <field id="voucherstatus">STATUS</field>
+        </fields>
+        <datatable viewname="fin_voucher_heads_vw">
+            <options>
+                <title>Voucher Head</title>
+            </options>
+            <header>
+                <title>Voucher Head ID</title>
+                <title>Voucher Head</title>
+                <title>Voucher Type</title>
+                <title>GL Account</title>
+                <title>Status</title>
+            </header>
+            <body>
+                <column>VOUCHER_HEAD_ID as DT_RowId</column>
+                <column>VOUCHER_HEAD_NAME</column>
+                <column>VOUCHER_TYPE</column>
+                <column>ACCOUNT_HEADS</column>
+                <column>STATUS</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="DONORFUNDS" viewname="fin_donor_donations" tablename="fin_donor_donations">
+        <primary>DONATION_ID</primary>
+        <fields>
+            <field id="donorname">DONOR_ID</field>
+            <field id="description">DESCRIPTION</field>
+            <field id="transactiondate">RECEIVED_DATE</field>
+            <field id="amount">AMOUNT</field>
+            <field id="fundcategory">FUND_CATEGORY</field>
+        </fields>
+        <datatable viewname="fin_donor_donations_vw">
+            <options>
+                <title>Donor Funds</title>
+            </options>
+            <header>
+                <title>Donor Fund ID</title>
+                <title>Donor Name</title>
+                <title>Transaction Date</title>
+                <title>Amount</title>
+                <title>Fund Category</title>
+            </header>
+            <body>
+                <column>DONATION_ID as DT_RowId</column>
+                <column>DONOR_NAME</column>
+                <column>RECEIVED_DATE</column>
+                <column>AMOUNT</column>
+                <column>FUND_CATEGORY</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="SUPPLIERPAYMENT" viewname="fin_supplier_payments" tablename="fin_supplier_payments">
+        <primary>SUPPLIER_PAYMENT_ID</primary>
+        <fields>
+            <field id="supplier">SUPPLIER_ID</field>
+            <field id="datepaid">DATE_PAID</field>
+            <field id="paymentmode">PAYMENT_MODE</field>
+            <field id="ponumber">PO_NUMBER</field>
+            <field id="fundcategory">BANK_CHARGE</field>
+            <field id="discount">DISCOUNT_AMOUNT</field>
+            <field id="paymentamount">PAYMENT_AMOUNT</field>
+            <field id="reference">REFERENCE</field>
+        </fields>
+        <datatable viewname="fin_supplier_payments">
+            <options>
+                <title>Supplier Payments</title>
+            </options>
+            <header>
+                <title>Supplier Payment ID</title>
+                <title>Supplier Name</title>
+                <title>Date</title>
+                <title>Payment Mode</title>
+                <title>Discount Amount</title>
+                <title>Payment Amount</title>
+                <title>Bank Name</title>
+                <title>Account Title</title>
+                <title>Cheque No</title>
+            </header>
+            <body>
+                <column>SUPPLIER_PAYMENT_ID as DT_RowId</column>
+                <column>SUPPLIER_ID</column>
+                <column>DATE_PAID</column>
+                <column>PAYMENT_MODE</column>
+                <column>DISCOUNT_AMOUNT</column>
+                <column>PAYMENT_AMOUNT</column>
+                <column>BANK_NAME</column>
+                <column>BANK_ACCOUNT_TITLE</column>
+                <column>CHEQUE_NUMBER</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="FEEWAIVERS" viewname="fin_fee_waivers" tablename="fin_fee_waivers">
+        <primary>FEE_WAIVER_ID</primary>
+        <fields>
+            <field id="feecategory">FEE_CATEGORY_ID</field>
+            <field id="feesubcategory">FEE_PARTICULAR_ID</field>
+            <field id="waivercategory">WAIVER_CATEGORY</field>
+            <field id="studentcategory">STUDENT_CATEGORY</field>
+            <field id="amount">AMOUNT</field>
+        </fields>
+        <datatable viewname="fin_fee_waivers_vw">
+            <options>
+                <title>Fee Waivers</title>
+            </options>
+            <header>
+                <title>Fee Waiver ID</title>
+                <title>Fee Category</title>
+                <title>Student Category</title>
+                <title>Waiver Category</title>
+                <title>Amount</title>
+            </header>
+            <body>
+                <column>FEE_WAIVER_ID as DT_RowId</column>
+                <column>CATEGORY_NAME</column>
+                <column>STUDENT_CATEGORY</column>
+                <column>WAIVER_CATEGORY</column>
+                <column>AMOUNT</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="LEAVETYPES" viewname="hrm_leave_types" tablename="hrm_leave_types">
+        <primary>LEAVE_TYPE_ID</primary>
+        <fields>
+            <field id="feecategory">LEAVE_TYPE_NAME</field>
+            <field id="particularName">LEAVES_ALLOWED</field>
+            <field id="category">SALARY_DEDUCTION_DAYS</field>
+            <field id="studentcategory">SALARY_DEDUCTION_AMOUNT</field>
+        </fields>
+        <datatable viewname="hrm_leave_types">
+            <options>
+                <title>Leave Types</title>
+            </options>
+            <header>
+                <title>Leave Type ID</title>
+                <title>Leave Type Name</title>
+                <title>Leaves Allowed</title>
+                <title>Salary Deduction Days</title>
+                <title>Salary Deduction Days</title>
+            </header>
+            <body>
+                <column>LEAVE_TYPE_ID as DT_RowId</column>
+                <column>LEAVE_TYPE_NAME</column>
+                <column>LEAVES_ALLOWED</column>
+                <column>SALARY_DEDUCTION_DAYS</column>
+                <column>SALARY_DEDUCTION_AMOUNT</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="FEEALLOCATION" viewname="fin_fee_allocation" tablename="fin_fee_allocation">
+        <primary>FEE_ALLOCATION_ID</primary>
+        <fields>
+            <field id="branch">BRANCH_ID</field>
+            <field id="class">CLASS</field>
+            <field id="feecategory">FEE_PARTICULAR_ID</field>
+        </fields>
+        <datatable viewname="fin_fee_allocation_vw">
+            <options>
+                <title>Fee Allocation</title>
+            </options>
+            <header>
+                <title>Fee Allocation ID</title>
+                <title>Branch Name</title>
+                <title>Class Name</title>
+                <title>Fee Category</title>
+                <title>Fee SubCategory</title>
+            </header>
+            <body>
+                <column>FEE_ALLOCATION_ID as DT_RowId</column>
+                <column>BRANCH_NAME</column>
+                <column>CLASS</column>
+                <column>CATEGORY_NAME</column>
+                <column>PARTICULAR_NAME</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="FEESTRUCTURE" viewname="fin_fee_challan_structure" tablename="fin_fee_challan_structure">
+        <primary>FEE_STRUCTURE_ID</primary>
+        <fields>
+            <field id="branch">BRANCH_ID</field>
+            <field id="class">CLASS</field>
+            <field id="feesubcategory">FEE_PARTICULAR_ID</field>
+            <field id="feecategory">FEE_CATEGORY_ID</field>
+            <field id="feeheader">FEE_CATEGORY_TYPE</field>
+            <field id="amount">AMOUNT</field>
+            <field id="feetype">FEE_PERIOD</field>
+        </fields>
+        <datatable viewname="fin_fee_structure_vw">
+            <!-- <buttons>
+                <button1 className="btn btn-primary ADD" data-toggle="modal" data-target="#modal_form_vertical" name="Detail" type="button" id="challan" value="\{\{$detail->FEE_STRUCTURE_ID\}\}"></button1>
+            </buttons> -->
+            <options>
+                <title>Fee Structure</title>
+            </options>
+            <header>
+                <title>Fee Structure ID</title>
+                <title>Fiscal Year</title>
+                <title>Branch Name</title>
+                <title>Class Name</title>
+                <title>Fee Category Type</title>
+                <title>Fee Category</title>
+                <title>Fee SubCategory</title>
+                <title>Fee Period</title>
+                <title>Amount</title>
+                <!-- <title>Detail</title> -->
+            </header>
+            <body>
+                <column>FEE_STRUCTURE_ID as DT_RowId</column>
+                <column>FISCAL_YEAR</column>
+                <column>BRANCH_NAME</column>
+                <column>CLASS</column>
+                <column>FEE_CATEGORY_TYPE</column>
+                <column>CATEGORY_NAME</column>
+                <column>PARTICULAR_NAME</column>
+                <column>FEE_PERIOD</column>
+                <column>AMOUNT</column>
+                <!-- <column>FEE_STRUCTURE_ID</column> -->
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="DONORALLOCATION" viewname="adc_donor_allocation" tablename="adc_donor_allocation">
+        <primary>DONOR_ALLOCATION_ID</primary>
+        <fields>
+            <field id="branch">BRANCH_ID</field>
+            <field id="class">CLASS</field>
+            <field id="donorname">DONOR_ID</field>
+            <field id="student">STUDENT_ID</field>
+        </fields>
+        <datatable viewname="adc_donor_allocation_vw">
+            <options>
+                <title>DONOR Allocation</title>
+            </options>
+            <header>
+                <title>Donor Allocation ID</title>
+                <title>Branch Name</title>
+                <title>Class Name</title>
+                <title>Student Name</title>
+                <title>Donor Name</title>
+            </header>
+            <body>
+                <column>DONOR_ALLOCATION_ID as DT_RowId</column>
+                <column>BRANCH_NAME</column>
+                <column>CLASS</column>
+                <column>STUDENT_NAME</column>
+                <column>DONOR_NAME</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="PURCHASEORDER" viewname="fin_purchase_item_vw" tablename="fin_purchase_item_vw">
+        <primary>PURCHASE_ORDER_ID</primary>
+        <fields>
+            <field id="branch">BRANCH_ID</field>
+            <field id="class">CLASS_ID</field>
+            <field id="donorname">DONOR_ID</field>
+            <field id="student">STUDENT_ID</field>
+        </fields>
+        <datatable viewname="fin_purchase_item_vw">
+            <options>
+                <title>Purchase Order</title>
+            </options>
+            <header>
+                <title>Purchase Order ID</title>
+                <title>Supplier Name</title>
+                <title>Customer Name</title>
+                <title>Items</title>
+                <title>Quantity</title>
+                <title>Unit Price</title>
+                <title>Total Price</title>
+                <title>Delivery Date</title>
+            </header>
+            <body>
+                <column>PURCHASE_ORDER_ID as DT_RowId</column>
+                <column>SUPPLIER_NAME</column>
+                <column>DELIVER_TO</column>
+                <column>ITEM_DESCRIPTION</column>
+                <column>QUANTITY</column>
+                <column>PRICE</column>
+                <column>TOTAL_PRICE</column>
+                <column>DELIVERY_DATE</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="ENTITLEMENT" viewname="hrm_entitlements_vw" tablename="hrm_entitlements_vw" delete="hrm_entitlements">
+        <primary>ENTITLEMENT_ID</primary>
+        <fields>
+            <!-- <field id="branchId">BRANCH_ID</field> -->
+            <field id="department">DEPARTMENT_ID</field>
+            <field id="designation">TITLE_ID</field>
+            <field id="leavetype">LEAVE_TYPE</field>
+            <field id="entitlements">ENTITLEMENT</field>
+        </fields>
+        <datatable viewname="hrm_entitlements_vw">
+            <options>
+                <title>Entitlement</title>
+            </options>
+            <header>
+                <title>Entitlement ID</title>
+                <!-- <title>BRANCH</title> -->
+                <title>Department</title>
+                <title>Designation</title>
+                <title>Employee</title>
+                <title>Leave Type</title>
+                <title>Entitlements</title>
+            </header>
+            <body>
+                <column>ENTITLEMENT_ID as DT_RowId</column>
+                <!-- <column>BRANCH_ID</column> -->
+                <column>DEPARTMENT_NAME</column>
+                <column>TITLE_NAME</column>
+                <column>EMPLOYEE_NAME</column>
+                <column>LEAVE_TYPE</column>
+                <column>ENTITLEMENT</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="LEAVESAPPLIED" viewname="hrm_applies_leaves_vw" tablename="hrm_applies_leaves_vw">
+        <primary>APPLY_LEAVE_ID</primary>
+        <fields>
+            <field id="department">DEPARTMENT_ID</field>
+            <field id="designation">TITLE_ID</field>
+            <field id="leavetype">LEAVE_TYPE</field>
+            <field id="employee">EMPLOYEE_ID</field>
+        </fields>
+        <datatable viewname="hrm_applies_leaves_vw">
+            <options>
+                <title>LEAVES</title>
+            </options>
+            <header>
+                <title>Apply Leave ID</title>
+                <title>Branch</title>
+                <title>Department</title>
+                <title>Designation</title>
+                <title>Employee</title>
+                <title>Leave Type</title>
+                <title>Leave Period Start</title>
+                <title>Leave Period End</title>
+                <title>Entitlements</title>
+                <title>Remaining Leaves</title>
+            </header>
+            <body>
+                <column>APPLY_LEAVE_ID as DT_RowId</column>
+                <column>BRANCH_NAME</column>
+                <column>DEPARTMENT_NAME</column>
+                <column>TITLE_NAME</column>
+                <column>EMPLOYEE_NAME</column>
+                <column>LEAVE_TYPE</column>
+                <column>LEAVE_PERIOD_START</column>
+                <column>LEAVE_PERIOD_END</column>
+                <column>ENTITLEMENT</column>
+                <column>Total_Remaining</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="EMPLOYEEPAYSLIP" viewname="hrm_employees_salary_structure_vw" tablename="hrm_employees_salary_structure_vw">
+        <primary>PAYSLIP_STRUCURE_ID</primary>
+        <fields>
+            <field id="employee">EMPLOYEE_ID</field>
+            <field id="branchId">BRANCH_ID</field>
+            <field id="department">DEPARTMENT_ID</field>
+            <field id="designation">TITLE_ID</field>
+        </fields>
+        <datatable viewname="hrm_employees_salary_structure_vw">
+            <options>
+                <title>Employee Payslip</title>
+            </options>
+            <header>
+                <title>Payslip ID</title>
+                <title>Employee Name</title>
+                <title>Category Name</title>
+                <title>Amount</title>
+            </header>
+            <body>
+                <column>PAYSLIP_STRUCURE_ID as DT_RowId</column>
+                <column>FULL_NAME</column>
+                <column>CATEGORY_NAME</column>
+                <column>AMOUNT</column>
+            </body>
+        </datatable>
+    </page>
+    <page codename="EMPLOYEEPAYSLIPDETAIL" viewname="hrm_employees_payslip_vw" tablename="hrm_employees_payslip_vw">
+        <primary>PAYSLIP_ID</primary>
+        <fields>
+            <field id="employee">EMPLOYEE_ID</field>
+            <field id="branchId">BRANCH_ID</field>
+            <field id="department">DEPARTMENT_ID</field>
+            <field id="designation">TITLE_ID</field>
+            <field id="basicsalary">BASIC_SALARY</field>
+            <field id="houserent">HOUSE_RENT</field>
+            <field id="utiltyallowance">UTILITY_ALLOWANCE</field>
+            <field id="pf">PROVIDENT_FUND</field>
+            <field id="advance">ADVANCED_SALARY</field>
+        </fields>
+        <datatable viewname="hrm_employees_payslip_vw">
+            <options>
+                <title>Employee Payslip</title>
+            </options>
+            <header>
+                <title>Payslip ID</title>
+                <title>Payslip No</title>
+                <title>Employee ID</title>
+                <title>Department Name</title>
+                <title>Employee Name</title>
+                <title>Year</title>
+                <title>Month</title>
+                <title>Print</title>
+                <!-- <title>Category Name</title>
+                <title>Amount</title> -->
+            </header>
+            <body>
+                <column>PAYSLIP_ID as DT_RowId</column>
+                <column>PAYSLIP_NO</column>
+                <column>EMPLOYEE_ID</column>
+                <column>DEPARTMENT_NAME</column>
+                <column>FULL_NAME</column>
+                <column>YEAR</column>
+                <column>MONTH</column>
+                <!-- <column>CATEGORY_NAME</column>
+                <column>AMOUNT</column> -->
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="EMPLOYEEPAYSLIPDEDUCTIONS" viewname="hrm_employees_salary_deduction_vw" tablename="hrm_employees_salary_deduction_vw">
+        <primary>PAYSLIP_DEDUCTION_ID</primary>
+        <fields>
+            <field id="employeeId">EMPLOYEE_ID</field>
+            <field id="branchId">BRANCH_ID</field>
+            <field id="department">DEPARTMENT_ID</field>
+            <field id="designation">TITLE_ID</field>
+            <field id="year">YEAR</field>
+            <field id="month">MONTH</field>
+        </fields>
+        <datatable viewname="hrm_employees_salary_deduction_vw">
+            <options>
+                <title>Employee Payslip</title>
+            </options>
+            <header>
+                <title>Payslip ID</title>
+                <title>Department Name</title>
+                <title>Employee Name</title>
+                <title>Year</title>
+                <title>Month</title>
+                <title>Salary Category</title>
+                <title>Amount</title>
+            </header>
+            <body>
+                <column>PAYSLIP_DEDUCTION_ID as DT_RowId</column>
+                <column>DEPARTMENT_NAME</column>
+                <column>FULL_NAME</column>
+                <column>YEAR</column>
+                <column>MONTH</column>
+                <column>CATEGORY_NAME</column>
+                <column>AMOUNT</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="HOSTELFEE" viewname="fin_hostel_fee_challan" tablename="fin_hostel_fee_challan">
+        <primary>HOSTEL_FEE_STRUCTURE_ID</primary>
+        <fields>
+            <field id="hostel">BRANCH_ID</field>
+            <field id="student">STUDENT_ID</field>
+            <field id="class">CLASS</field>
+        </fields>
+        <datatable viewname="fin_hostel_fee_challan_vw">
+            <options>
+                <title>Hostel Fee Structure</title>
+            </options>
+            <header>
+                <title>Fee Generate ID</title>
+                <title>Challan No</title>
+                <title>Hostel Name</title>
+                <title>Branch Name</title>
+                <title>Class</title>
+                <title>Student Name</title>
+                <title>Month</title>
+                <title>Fee Category Type</title>
+                <title>Particular Name</title>
+                <title>Amount</title>
+            </header>
+            <body>
+                <column>HOSTEL_FEE_CHALLAN_ID as DT_RowId</column>
+                <column>CHALLAN_NO</column>
+                <column>HOSTEL_NAME</column>
+                <column>BRANCH_NAME</column>
+                <column>CLASS</column>
+                <column>STUDENT_NAME</column>
+                <column>MONTH</column>
+                <column>FEE_CATEGORY_TYPE</column>
+                <column>PARTICULAR_NAME</column>
+                <column>AMOUNT</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="FEEGENERATE" viewname="fin_fee_challans" tablename="fin_fee_challans">
+        <primary>CHALLAN_ID</primary>
+        <fields>
+            <field id="hostel">BRANCH_ID</field>
+            <field id="student">STUDENT_ID</field>
+            <field id="class">CLASS</field>
+            <field id="month">MONTH</field>
+            <field id="challan">CHALLAN_NO</field>
+        </fields>
+        <datatable viewname="fin_fee_bills_vw">
+            <options>
+                <title>Fee Generate</title>
+            </options>
+            <header>
+                <title>Fee Generate ID</title>
+                <title>Challan No</title>
+                <title>Branch Name</title>
+                <title>Class</title>
+                <title>Student Name</title>
+                <title>Month</title>
+                <title>Fee Category Type</title>
+                <title>Particular Name</title>
+                <title>Amount</title>
+            </header>
+            <body>
+                <column>CHALLAN_ID as DT_RowId</column>
+                <column>CHALLAN_NO</column>
+                <column>BRANCH_NAME</column>
+                <column>CLASS</column>
+                <column>STUDENT_NAME</column>
+                <column>MONTH</column>
+                <column>FEE_CATEGORY_TYPE</column>
+                <column>PARTICULAR_NAME</column>
+                <column>AMOUNT</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="FEEEDITCHALLAN" viewname="fin_fee_bills_vw" tablename="fin_fee_bills_vw">
+        <primary>CHALLAN_DETAIL_ID</primary>
+        <fields>
+            <field id="challan">CHALLAN_NO</field>
+            <field id="feecategory">FEE_PARTICULAR_ID</field>
+            <field id="amount">AMOUNT</field>
+        </fields>
+        <datatable viewname="fin_fee_bills_vw">
+            <options>
+                <title>Fee Challan Edit</title>
+            </options>
+            <header>
+                <title>Fee Challan ID</title>
+                <title>Challan No</title>
+                <title>Student Name</title>
+                <title>Class</title>
+                <title>Particular Name</title>
+                <title>Amount</title>
+            </header>
+            <body>
+                <column>CHALLAN_DETAIL_ID as DT_RowId</column>
+                <column>CHALLAN_NO</column>
+                <column>STUDENT_NAME</column>
+                <column>CLASS</column>
+                <column>PARTICULAR_NAME</column>
+                <column>AMOUNT</column>
+            </body>
+        </datatable>
+    </page>
+
+    <page codename="SALARYCATEGORY" viewname="hrm_salary_categories" tablename="hrm_salary_categories">
+        <primary>SALARY_CATEGORY_ID</primary>
+        <fields>
+            <field id="category">CATEGORY_NAME</field>
+            <field id="type">TYPE</field>
+            <field id="description">DESCRIPTION</field>
+        </fields>
+        <datatable viewname="hrm_salary_categories_vw">
+            <options>
+                <title>Salary Category</title>
+            </options>
+            <header>
+                <title>Salary Catgeory ID</title>
+                <title>Category</title>
+                <title>TYPE</title>
+                <title>Description</title>
+            </header>
+            <body>
+                <column>SALARY_CATEGORY_ID as DT_RowId</column>
+                <column>CATEGORY_NAME</column>
+                <column>TYPE</column>
+                <column>DESCRIPTION</column>
+            </body>
+        </datatable>
+    </page>
+
+        <page codename="FEECHALLAN" viewname="fin_fee_challan_student_vw" tablename="fin_fee_challan_student_vw">
+        <primary>CHALLAN_ID</primary>
+        <datatable viewname="fin_fee_challan_student_vw">
+            <buttons>
+                <button1 className="btn btn-primary ADD" data-toggle="modal" data-target="#modal_form_vertical" name="Detail" type="button" id="challan" value="\{\{$detail->CHALLAN_ID\}\}"></button1>
+            </buttons>
+            <options>
+                <title>Fee Challan</title>
+            </options>
+            <header>
+                <title>Row</title>
+                <title>Challan</title>
+                <title>CLASS</title>
+                <title>Student</title>
+                <title>YEAR</title>
+                <title>MONTH</title>
+                <title>Detail</title>
+            </header>
+            <body>
+                <column>CHALLAN_NO as Row_ID</column>
+                <column>CHALLAN_NO</column>
+                <column>CLASS</column>
+                <column>FULL_NAME</column>
+                <column>YEAR</column>
+                <column>MONTH</column>
+                <column>CHALLAN_ID</column>
+            </body>
+        </datatable>
+    </page>
+
+    
+
+</pages>

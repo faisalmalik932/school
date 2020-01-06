@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dropdowns>
+    <dropdown codename="COUNTRY" viewname="ptf_loc_countries">
+        <datacolumn>COUNTRY_ID</datacolumn>
+        <datacolumn>COUNTRY_NAME</datacolumn>
+    </dropdown>
+    <dropdown codename="STATE" viewname="ptf_loc_states">
+        <datacolumn>STATE_ID</datacolumn>
+        <datacolumn>STATE_NAME</datacolumn>
+        <where>
+            <column>COUNTRY_ID</column>
+        </where>
+    </dropdown>
+    <dropdown codename="CITY" viewname="ptf_loc_cities">
+        <datacolumn>CITY_ID</datacolumn>
+        <datacolumn>CITY_NAME</datacolumn>
+        <where>
+            <column>STATE_ID</column>
+        </where>
+    </dropdown>
+    <dropdown codename="BRANCH" viewname="ptf_branches">
+        <datacolumn>BRANCH_ID</datacolumn>
+        <datacolumn>BRANCH_NAME</datacolumn>
+        <where>
+            <column>CITY_ID</column>
+        </where>
+    </dropdown>
+    <dropdown codename="CLASSES" viewname="adc_classes">
+        <datacolumn>CLASS_ID</datacolumn>
+        <datacolumn>CLASS_NAME</datacolumn>
+        <where>
+            <column>BRANCH_ID</column>
+        </where>
+    </dropdown>
+    <dropdown codename="HOSTEL" viewname="ptf_hostels_vw">
+        <datacolumn>HOSTEL_ID</datacolumn>
+        <datacolumn>HOSTEL_NAME</datacolumn>
+        <where>
+            <column>HOSTEL_ID</column>
+        </where>
+    </dropdown>
+    <dropdown codename="STUDENT" viewname="adc_students_vw">
+        <datacolumn>STUDENT_ID</datacolumn>
+        <datacolumn>STUDENT_NAME</datacolumn>
+        <where>
+            <column>STUDENT_ID</column>
+        </where>
+    </dropdown>
+    <dropdown codename="FEECATEGORY" viewname="fin_fee_categories">
+        <datacolumn>FEE_CATEGORY_ID</datacolumn>
+        <datacolumn>CATEGORY_NAME</datacolumn>
+        <where>
+            <column>FEE_HEADER</column>
+        </where>
+    </dropdown>
+    <dropdown codename="FISCALYEAR" viewname="fin_fiscal_year">
+    <datacolumn>FISCAL_YEAR_ID</datacolumn>
+    <datacolumn>CATEGORY_NAME</datacolumn>
+    <where>
+        <column>FEE_HEADER</column>
+    </where>
+</dropdown>
+    <dropdown codename="DONOR" viewname="adc_donors">
+        <datacolumn>DONOR_ID</datacolumn>
+        <datacolumn>DONOR_NAME</datacolumn>
+        <where>
+            <column>DONOR_ID</column>
+        </where>
+    </dropdown>
+</dropdowns>
