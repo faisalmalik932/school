@@ -20,7 +20,7 @@ class BankAccountModel extends BaseModel
 
     public function saveBankAccountInfo(BankAccountVO $bankAccountVO)
     {
-        $result = $this->select()->where('BANK_ACCOUNT_NO', '=', $bankAccountVO->getBankaccountNumber())->get();
+        $result = $this->select()->where([['BANK_ACCOUNT_NO', '=', $bankAccountVO->getBankaccountNumber()]])->get();
         if (count($result) > 0) {
             $bankAccountVO->setErrorResponse(true, '0000026');
         } else {

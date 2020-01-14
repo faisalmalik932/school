@@ -29,7 +29,7 @@
 </head>
 <body>
 <div class="dataTable_wrapper">
-    <div id="logo"><img src="{{ asset('images/peb-logo.png') }}"/></div>
+    <div id="logo"><img src="{{ asset('assets/images/peb-logo.png') }}"/></div>
     <h1 id="peb"><b>Presbyterian Education Board</b></h1>
     <?php echo $branchData;?>
     <table class="table">

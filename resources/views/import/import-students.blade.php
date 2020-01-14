@@ -56,5 +56,5 @@
 @endsection
 
 @section('jsheader')
-    <script  type="text/javascript" src="{{ asset('js/platform/users.js') }}"></script>
+    <script  type="text/javascript" src="{{ asset('assets/js/platform/users.js') }}"></script>
 @endsection

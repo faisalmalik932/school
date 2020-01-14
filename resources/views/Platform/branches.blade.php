@@ -176,6 +176,6 @@
 
 
 
-<script  type="text/javascript" src="{{ asset('js/Platform/users.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/Platform/users.js') }}"></script>
 @endsection
 

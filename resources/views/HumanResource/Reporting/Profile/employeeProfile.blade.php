@@ -29,7 +29,7 @@
 </head>
 <body>
 <div class="dataTable_wrapper">
-    <div id="logo"><img src="{{ asset('images/peb-logo.png') }}"/></div>
+    <div id="logo"><img src="{{ asset('assets/images/peb-logo.png') }}"/></div>
     <h1 id="peb"><b>Presbyterian Education Board</b></h1>
     <h1 id="peb"><b>{{$employee->BRANCH_NAME}}</b></h1>
     <table class="table">
@@ -38,7 +38,7 @@
        <tr>
             <td></td>
             <td width="1em"></td>
-            <td><img src="http://localhost:8080/school/uploads/employees/<?php  
+            <td><img src="http://localhost:8080/schoolplus/uploads/employees/<?php  
             if($employee->EMP_PICTURE)
             echo  $employee->EMP_PICTURE;
             ?>" width="100px;"></td>

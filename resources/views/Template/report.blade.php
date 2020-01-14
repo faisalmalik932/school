@@ -44,7 +44,7 @@
     <table width="100%">
         <tr>
             <td>
-                <img src="{{ asset('images/peb-logo.png') }}" />
+                <img src="{{ asset('assets/images/peb-logo.png') }}" />
             </td>
             <td>
                 <span style="font-size: 22px"><b>{{ env('COMPANY_NAME', 'Presbyterian Education Board') }}</b></span><br>

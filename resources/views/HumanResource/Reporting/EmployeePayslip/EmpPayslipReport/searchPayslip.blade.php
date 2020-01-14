@@ -84,7 +84,7 @@
 @endsection
 
 @section('jsheader')
-<script type="text/javascript" src="{{ asset('js/hr/employeepayslip.js') }}">
+<script type="text/javascript" src="{{ asset('assets/js/hr/employeepayslip.js') }}">
 </script>
-<script  type="text/javascript" src="{{ asset('js/hr/validation.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/hr/validation.js') }}"></script>
 @endsection

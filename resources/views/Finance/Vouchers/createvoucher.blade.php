@@ -98,5 +98,5 @@
     </div>
 @endsection
 @section('jsheader')
-    <script type="text/javascript" src="{{ asset('js/finance/createvoucher.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/finance/createvoucher.js') }}"></script>
 @endsection

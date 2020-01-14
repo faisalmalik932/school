@@ -32,7 +32,7 @@ class ApplyLeavesController extends BaseController
 
     public function addemployeeLeaves(Request $request)
     {
-        dd($request->all());
+        //dd($request->all());
         $validator = \Validator::make($request->all(), [
             'leaveperiodstart' => 'required|after:today',
             'leaveperiodend' => 'required|after:today|after:leaveperiodstart',

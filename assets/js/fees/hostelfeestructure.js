@@ -1,6 +1,6 @@
 jQuery( document ).ready(function($) {
 
-    var baseUrl = window.location.protocol + "//" + window.location.host + "/school/api";
+    var baseUrl = window.location.protocol + "//" + window.location.host + "/schoolplus/api";
     var dataTableArray = [];
 
     var datatable = $('#datatables').DataTable( {

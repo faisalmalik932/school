@@ -45,7 +45,7 @@
         <body>
         <h2 style="text-align: center"><b>Presbyterian Education Board</b></h2>
         <h3 style="text-align: center"><b>Details Of Donors </b></h3>
-        <div id="logo"><img src="{{ asset('images/peb-logo.png') }}"/></div>
+        <div id="logo"><img src="{{ asset('assets/images/peb-logo.png') }}"/></div>
         <div id="total"><h4 style="height: 1px">Total Donors &nbsp;&nbsp;{!!$total!!}</h4>
         <h4 >Total Amount &nbsp;&nbsp;{!!$sum!!}</h4></div>
         <div class="dataTable_wrapper TABLE">

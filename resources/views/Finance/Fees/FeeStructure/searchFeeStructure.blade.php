@@ -74,6 +74,6 @@
 </div>
 @endsection
 @section('jsheader')
-<script type="text/javascript" src="{{ asset('js/fees/feegenerate.js') }}">
+<script type="text/javascript" src="{{ asset('assets/js/fees/feegenerate.js') }}">
 </script>
 @endsection

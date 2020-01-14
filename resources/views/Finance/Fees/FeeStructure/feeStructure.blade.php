@@ -171,6 +171,6 @@
 @endsection
 
 @section('jsheader')
-<script  type="text/javascript" src="{{ asset('js/fees/feestructure.js') }}">
+<script  type="text/javascript" src="{{ asset('assets/js/fees/feestructure.js') }}">
 </script>
 @endsection

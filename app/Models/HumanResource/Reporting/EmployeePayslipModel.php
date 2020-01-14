@@ -155,7 +155,7 @@ class EmployeePayslipModel extends BaseModel
 
     public function getPayslipStructure($branch,$department,$title,$employee)
     {
-        if (count($branch)>0&&count($department)>0&&count($title)>0&&count($employee)>0)
+        if (count([$branch])>0&&count([$department])>0&&count([$title])>0&&count([$employee])>0)
         {
             $details = $this->select('EMPLOYEE_ID','DEPARTMENT_ID','TITLE_ID','SALARY_CATEGORY_ID','AMOUNT' , 'SALARY_TYPE')
                 ->where([['BRANCH_ID', '=', $branch],
@@ -164,7 +164,7 @@ class EmployeePayslipModel extends BaseModel
                 // ->groupBy('EMPLOYEE_ID','DEPARTMENT_ID','TITLE_ID')
                 ->get();
         }
-        elseif (count($branch)>0&&count($department)>0&&count($title)>0)
+        elseif (count([$branch])>0&&count([$department])>0&&count([$title])>0)
         {
             $details = $this->select('EMPLOYEE_ID','DEPARTMENT_ID','TITLE_ID','SALARY_CATEGORY_ID','AMOUNT' , 'SALARY_TYPE')
                 ->where([['BRANCH_ID', '=',$branch],
@@ -172,7 +172,7 @@ class EmployeePayslipModel extends BaseModel
                 // ->groupBy('EMPLOYEE_ID','DEPARTMENT_ID','TITLE_ID')
                 ->get();
         }
-        elseif (count($branch)>0&&count($department)>0)
+        elseif (count([$branch])>0&&count([$department])>0)
         {
             $details = $this->select('EMPLOYEE_ID','DEPARTMENT_ID','TITLE_ID','SALARY_CATEGORY_ID','AMOUNT', 'SALARY_TYPE')
                 ->where([['BRANCH_ID', '=',$branch],['DEPARTMENT_ID','=',$department]])
@@ -185,7 +185,8 @@ class EmployeePayslipModel extends BaseModel
                 // ->groupBy('EMPLOYEE_ID','DEPARTMENT_ID','TITLE_ID')
                 ->get();
         }
-                // dd($details);
+                 //dd($details);
+                 //exit();
         return $details;
     }
 

@@ -232,7 +232,7 @@
 @endsection
 
 @section('jsheader')
-    <script type="text/javascript" src="{{ asset('js/pages/dashboard.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/plugins/visualization/echarts/echarts.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/charts/echarts/lines_areas.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/pages/dashboard.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/plugins/visualization/echarts/echarts.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/js/charts/echarts/lines_areas.js') }}"></script>
 @endsection

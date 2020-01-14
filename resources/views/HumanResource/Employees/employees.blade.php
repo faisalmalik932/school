@@ -119,7 +119,7 @@
                                 <div class="col-md-6">
                                     <div class="content-group-lg">
                                         <label>Home Phone *</label>
-                                        <input type="text" id="homeNumb"  name="home_phone" class="form-control validate[required,minSize[11]] NUMS"  placeholder="Home Phone"  >
+                                        <input type="text" id="homeNumb"  name="home_phone" class="form-control validate[required,minSize[11]] LANDLINENUMBER"  placeholder="Home Phone"  >
                                     </div>
                                 </div>
                             </div>
@@ -257,8 +257,8 @@
 @endsection
 
 @section('jsheader')
-<script  type="text/javascript" src="{{ asset('js/hr/employee.js') }}"></script>
-<script  type="text/javascript" src="{{ asset('js/hr/validation.js') }}">
+<script  type="text/javascript" src="{{ asset('assets/js/hr/employee.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/hr/validation.js') }}">
 </script>
 <script>
         function readURL(input) {

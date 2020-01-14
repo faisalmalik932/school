@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="shortcut icon" type="image/png" href="{{ asset('images/favicon.icons') }}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/favicon.icons') }}"/>
     <title>General Ledger</title>
     <style>
         .table {

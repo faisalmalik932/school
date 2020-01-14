@@ -395,8 +395,8 @@
 @endsection
 
 @section('jsheader')
-    <script  type="text/javascript" src="{{ asset('js/registration/student.js') }}">
+    <script  type="text/javascript" src="{{ asset('assets/js/registration/student.js') }}">
     </script>
-    <script  type="text/javascript" src="{{ asset('js/registration/validation.js') }}">
+    <script  type="text/javascript" src="{{ asset('assets/js/registration/validation.js') }}">
     </script>
 @endsection

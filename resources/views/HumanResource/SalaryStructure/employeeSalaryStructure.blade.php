@@ -134,8 +134,8 @@
 
 @section('jsheader')
 
-<script  type="text/javascript" src="{{ asset('js/hr/entitlement.js') }}"></script>
-<script  type="text/javascript" src="{{ asset('js/hr/salarystructure.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/hr/entitlement.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/hr/salarystructure.js') }}"></script>
 @endsection
 
 

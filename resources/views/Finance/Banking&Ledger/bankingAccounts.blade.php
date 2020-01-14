@@ -118,6 +118,6 @@
 </div>
 @endsection
 @section('jsheader')
-<script  type="text/javascript" src="{{ asset('js/finance/bankAccount.js') }}">
+<script  type="text/javascript" src="{{ asset('assets/js/finance/bankAccount.js') }}">
 </script>
 @endsection

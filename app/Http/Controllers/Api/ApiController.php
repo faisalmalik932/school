@@ -106,8 +106,21 @@ class ApiController extends BaseController
         $class = Input::get("CLASS");
         $RollNo = Input::get("ROLL_NO");
         $branch = Input::get("BRANCH_ID");
-        if($class != null || $branch != null || $RollNo != null){
-            $list = DB::table('adc_students_info_vw')->select('ERP_CODE', 'ROLL_NO', 'STUDENT_NAME','FULL_NAME as FATHER_NAME','BAYFORM_NO','GENDER','STATUS')->where('BRANCH_ID', '=', $branch)->orwhere('ROLL_NO', $RollNo)->orwhere([['CLASS', $class]])->get();
+        //return $class;
+        if($class != null && $branch != null && $RollNo == null){
+            $list = DB::table('adc_students_info_vw')->select('ERP_CODE', 'ROLL_NO', 'STUDENT_NAME','FULL_NAME as FATHER_NAME','BAYFORM_NO','GENDER','STATUS')->where([
+                ['BRANCH_ID', '=', $branch],
+                ['ROLL_NO', '=', $RollNo],
+                ['CLASS', '=', $class]
+            ])->get();
+        }
+        else if($class != null && $branch != null && $RollNo != null){
+            $list = DB::table('adc_students_info_vw')->select('ERP_CODE', 'ROLL_NO', 'STUDENT_NAME','FULL_NAME as FATHER_NAME','BAYFORM_NO','GENDER','STATUS')->where([
+                ['BRANCH_ID', '=', $branch],
+                ['ROLL_NO', '=', $RollNo],
+                ['CLASS', '=', $class]
+            ])->get();
+           /* )->orwhere('ROLL_NO', $RollNo)->orwhere([['CLASS', $class]])->get();*/
         }
         else{
             $list = DB::table('adc_students_info_vw')->select('ERP_CODE', 'ROLL_NO', 'STUDENT_NAME','FULL_NAME as FATHER_NAME','BAYFORM_NO','GENDER','STATUS')->get();

@@ -123,6 +123,6 @@
 @endsection
 
 @section('jsheader')
-<script  type="text/javascript" src="{{ asset('js/fees/hostelfeestructure.js') }}">
+<script  type="text/javascript" src="{{ asset('assets/js/fees/hostelfeestructure.js') }}">
 </script>
 @endsection

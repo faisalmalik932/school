@@ -151,7 +151,7 @@
 @endsection
 
 @section('jsheader')
-<script  type="text/javascript" src="{{ asset('js/hr/employee.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/hr/employee.js') }}"></script>
 @endsection
 
 

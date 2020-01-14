@@ -57,6 +57,6 @@
 @endsection
 
 @section('jsheader')
-<script type="text/javascript" src="{{ asset('js/Finance/ledgerReport.js') }}">
+<script type="text/javascript" src="{{ asset('assets/js/Finance/ledgerReport.js') }}">
 </script>
 @endsection

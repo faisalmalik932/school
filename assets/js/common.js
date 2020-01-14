@@ -26,7 +26,7 @@
  * the property of Prosigns Technologies
  */
 
-var commonurl = 'portal';
+var commonurl = 'schoolplus';
 $(function() {
    /* var form = $( "#DATAFORM" );
     form.validate();*/
@@ -151,7 +151,7 @@ function sentenceCase (str) {
 }
 
 jQuery( document ).ready(function($) {
-    var baseUrlApi = window.location.protocol + "//" + window.location.host + "/school/api/";
+    var baseUrlApi = window.location.protocol + "//" + window.location.host + "/schoolplus/api/";
     /* Form Validation*/
 
         jQuery("#DATAFORM").validationEngine('attach',
@@ -259,6 +259,16 @@ jQuery( document ).ready(function($) {
             greedy: false,
             placeholder: "",
             definitions: { '#': { validator: "[0-9]", cardinality: 1}} });
+
+        /* Cheque Number Validations*/
+
+        var cheque = [{ "mask": "#########-######"} ,{ "mask": "(###) #########-######"}];
+        $('.CHEQUE').inputmask({
+            mask: cheque,
+            greedy: false,
+            placeholder: "",
+            definitions: { '#': { validator: "[0-9]", cardinality: 1}} });
+
 
         /* Success Message*/
         window.setTimeout(function() {

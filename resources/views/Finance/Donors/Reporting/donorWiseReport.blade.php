@@ -37,7 +37,7 @@
     <body>
     <h2 style="text-align: center"><b>Presbyterian Education Board</b></h2>
     <h3 style="text-align: center"><b>Donor Report(Donor Wise)</b></h3>
-    <div id="logo"><img src="{{ asset('images/peb-logo.png') }}"/></div>
+    <div id="logo"><img src="{{ asset('assets/images/peb-logo.png') }}"/></div>
     <div class="donor">
     </div>
     <div class="dataTable_wrapper TABLE">

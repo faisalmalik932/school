@@ -79,5 +79,5 @@
 @endsection
 
 @section('jsheader')
-<script  type="text/javascript" src="{{ asset('js/fees/feecategory.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/fees/feecategory.js') }}"></script>
 @endsection

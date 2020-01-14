@@ -87,6 +87,6 @@
 @endsection
 
 @section('jsheader')
-<script type="text/javascript" src="{{ asset('js/finance/accountheads.js') }}">
+<script type="text/javascript" src="{{ asset('assets/js/finance/accountheads.js') }}">
 </script>
 @endsection

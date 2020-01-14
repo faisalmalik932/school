@@ -156,5 +156,5 @@
 
 @endsection
 @section('jsheader')
-<script  type="text/javascript" src="{{ asset('js/donors/donors.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/donors/donors.js') }}"></script>
 @endsection

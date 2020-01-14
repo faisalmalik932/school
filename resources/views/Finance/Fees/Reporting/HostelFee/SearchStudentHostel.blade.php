@@ -65,6 +65,6 @@
 @endsection
 
 @section('jsheader')
-<script type="text/javascript" src="{{ asset('js/finance/chalaanform.js') }}">
+<script type="text/javascript" src="{{ asset('assets/js/finance/chalaanform.js') }}">
 </script>
 @endsection

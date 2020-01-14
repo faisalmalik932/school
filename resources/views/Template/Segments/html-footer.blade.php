@@ -1,5 +1,5 @@
 <div class="spin" data-spin />
-<script type="text/javascript" src="{{ asset('js/footer-scripts.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/footer-scripts.js') }}"></script>
 <div id="modal_form_vertical" class="modal fade" tabindex="-1" role="dialog"
      aria-labelledby="myModal" aria-hidden="true">
     <div class="modal-dialog">

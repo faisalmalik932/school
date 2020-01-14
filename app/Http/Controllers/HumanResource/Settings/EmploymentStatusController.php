@@ -25,13 +25,16 @@ class EmploymentStatusController extends BaseController
     public function add(Request $request)
     {
         $primary = $request->input('primary');
-        if(count($primary)==0) {
+        //dd($primary);
+        /*print_r($primary);
+        exit();*/
+        if($primary == null) {
             $jobstatusVO = new JobStatusVO();
             $jobstatusVO->setOrgId(request()->session()->get('ORG_ID'));
             $jobstatusVO->setJobStatusName($request->input('job_status'));
             $jobstatusVO->setDescription($request->input('description'));
             $emptstatusModel = new EmploymentStatusModel();
-            $emptstatusModel->saveJobStatus($jobstatusVO);
+            $emptstatusModel->saveJobStatus($jobstatusVO); 
             if ($jobstatusVO->getError()) {
                 return $this->getMessageWithRedirect($jobstatusVO->getErrorCode());
             } else {

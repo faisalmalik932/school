@@ -94,6 +94,6 @@
 @endsection
 
 @section('jsheader')
-<script type="text/javascript" src="{{ asset('js/searchemployee.js') }}">
+<script type="text/javascript" src="{{ asset('assets/js/searchemployee.js') }}">
 </script>
 @endsection

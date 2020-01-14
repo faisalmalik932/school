@@ -55,5 +55,5 @@
     </div>
 </div>
 <?php $session_value=(isset($_SESSION['BRANCH_ID']))?$_SESSION['id']:''; ?>
-<script  type="text/javascript" src="{{ asset('js/common.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/common.js') }}"></script>
 <!-- /main navbar -->

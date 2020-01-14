@@ -112,6 +112,9 @@ class FeeChallanController extends  BaseController
     {
         $categoriesModel  =new FeeChallanDetailModel();
         $categories = $categoriesModel->loadChallanCategories();
+        /*dd($categories);*/
+        /*return $categories;
+        exit();*/
         return view('Finance.Fees.EditFeeChallan.searchFeeChallan',compact('categories'));
     }
 

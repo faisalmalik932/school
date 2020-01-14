@@ -28,6 +28,7 @@
                             <option disabled>Select Year</option>
                             <option selected>2018</option>
                             <option>2019</option>
+                            <option>2020</option>
                         </select>
                     </div>
                 </div>
@@ -97,6 +98,6 @@
 @endsection
 
 @section('jsheader')
-<script type="text/javascript" src="{{ asset('js/finance/chalaanform.js') }}">
+<script type="text/javascript" src="{{ asset('assets/js/finance/chalaanform.js') }}">
 </script>
 @endsection

@@ -67,7 +67,7 @@
                             <div class="col-md-6">
                                 <div class="content-group-lg">
                                     <label>Account Number</label>
-                                    <input type="text" id="accountnumber"   name="accountnumber" class="form-control"   placeholder="Account Number">
+                                    <input type="text" id="accountnumber"   name="accountnumber" class="form-control validate[numeric|required]" minlength="16" maxlength="24"  placeholder="Account Number">
                                 </div>
                             </div>
                         </div>
@@ -197,7 +197,7 @@
 </div>
 @endsection
 @section('jsheader')
-<script  type="text/javascript" src="{{ asset('js/Finance/supplier.js') }}">
+<script  type="text/javascript" src="{{ asset('assets/js/Finance/supplier.js') }}">
 </script>
 
 @endsection

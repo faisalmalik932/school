@@ -39,7 +39,7 @@
                             </div>  
                             <div class="col-md-6">
                                 <label>Transaction Date</label>
-                                <div class="input-group"">
+                                <div class="input-group">
                                     <span class="input-group-addon"><i class="icon-calendar22"></i></span>
                                     <input type="date" readonly id="transactiondate" class="form-control  validate[required]"  name="transactiondate" value="<?php echo date("Y-m-d"); ?>" placeholder="Transaction Date">
                                 </div>
@@ -60,7 +60,7 @@
                     <div class="col-md-6">
                         <div class="content-group-lg">
                             <label>Cheque No</label>
-                            <input class="form-control validate[required]" id="chequeno" name="chequeno" placeholder="Cheque No">
+                            <input class="form-control validate[numeric|required] " id="chequeno" name="chequeno" placeholder="Cheque No" minlength="16" maxlength="17">
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
 @endsection
 @section('jsheader')
 <!-- <script  type="text/javascript" src="{{ asset('js/finance/bankpaymentvoucher.js') }}"></script> -->
-<script  type="text/javascript" src="{{ asset('js/finance/bankvoucher.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/finance/bankvoucher.js') }}"></script>
 <!-- <script type="text/javascript" src="{{ asset('js/finance/createvoucher.js') }}"></script> -->
 
 @endsection

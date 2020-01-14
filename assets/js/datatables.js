@@ -149,11 +149,11 @@ $(function () {
                 $('#DATAFORM').validationEngine('hide');
 
                 if (baseUrl + 'fetch/' + datatable.data('code') === baseUrl + "fetch/employees") {
-                    document.getElementById("pic").src = "/school/uploads/employees" + '/' + $('#empPic').val();
+                    document.getElementById("pic").src = "/schoolplus/uploads/employees" + '/' + $('#empPic').val();
                     $("#pic").css('height', '100');
                 }
                 else if (baseUrl + 'fetch/' + datatable.data('code') === baseUrl + "fetch/students") {
-                    document.getElementById("img").src = "/school/uploads/students" + '/' + $('#Pic').val();
+                    document.getElementById("img").src = "/schoolplus/uploads/students" + '/' + $('#Pic').val();
                     $("#img").css('height', '100');
                 }
                 else {

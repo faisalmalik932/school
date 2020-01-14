@@ -93,7 +93,7 @@
 @endsection
 
 @section('jsheader')
-<script  type="text/javascript" src="{{ asset('js/Donors/donors.js') }}"></script>
+<script  type="text/javascript" src="{{ asset('assets/js/Donors/donors.js') }}"></script>
 <!--<script>
     $(document).ready(function() {
         /*$(".SHOW").click(function (e) {
