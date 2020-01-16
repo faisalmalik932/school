@@ -40,6 +40,8 @@ Route::get('/showSiblings',[ 'uses' => 'Api\ApiController@getSiblingList']);
 Route::get('/showStudents',[ 'uses' => 'Api\ApiController@getStudentList']);
 Route::get('/getEmployees',[ 'uses' => 'Api\ApiController@getEmployees']);
 Route::get('/showList',[ 'uses' => 'Api\ApiController@getSearchStudentsList']);
+Route::get('/challanList',[ 'uses' => 'Api\ApiController@getSearchChallansList']);
+
 Route::get('/jobTitlesList',[ 'uses' => 'Api\ApiController@getJobsList']);
 Route::get('/getSections',[ 'uses' => 'Api\ApiController@getSections']);
 Route::get('/classList',[ 'uses' => 'Api\ApiController@getClasses']);

@@ -671,7 +671,7 @@
             <field id="accountcode">GL_CODE</field>
             <field id="chargesaccount">CHARGES_ACCOUNT</field>
         </fields>
-        <datatable viewname="fin_bank_accounts_vw">
+        <datatable viewname="fin_bank_accounts">
             <options>
                 <title>Bank Accounts</title>
             </options>
@@ -680,14 +680,16 @@
                 <title>Bank Name</title>
                 <title>Bank Account Title</title>
                 <title>Bank Account No</title>
-                <title>GL Account</title>
+                <title>Bank Account Type</title>
+                <title>Bank Address</title>
             </header>
             <body>
                 <column>ACCOUNT_ID as DT_RowId</column>
                 <column>BANK_NAME</column>
                 <column>BANK_ACCOUNT_TITLE</column>
                 <column>BANK_ACCOUNT_NO</column>
-                <column>PARENT_ACCOUNT_NAME</column>
+                <column>ACCOUNT_TYPE</column>
+                <column>BANK_ADDRESS</column>
             </body>
         </datatable>
     </page>

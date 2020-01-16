@@ -25,6 +25,7 @@ class BankAccountController extends BaseController
         $currency = $currencyModel->loadCurrencies();
         $accountHeads = new AccountHeadModel();
         $accountHead = $accountHeads->loadAccountHeadsByClassType();
+        //dd($accountHead);
         return view('Finance.Banking&Ledger.bankingAccounts')->with('currency',$currency)->with('accountheads',$accountHead);
     }
 

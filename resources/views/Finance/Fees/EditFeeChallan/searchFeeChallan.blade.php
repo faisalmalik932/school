@@ -15,10 +15,11 @@
         <div class="tabbable">
             <ul class="nav nav-tabs nav-tabs-bottom bottom-divided nav-justified">
                 <li class="active"><a href="#form" data-toggle="tab">Search Challan</a></li>
+                <li ><a href="#list" data-toggle="tab">Challan</a></li>
             </ul>
             <div class="tab-content">
                 <div class="tab-pane  active" id="form">
-                    <form method="GET" action="{{ url('/finance/fees/fee-challan-details') }}" id="DATAFORM" class="form-horizontal" enctype="multipart/form-data">
+                    <form method="GET" action="{{ url('') }}" id="DATAFORM" class="form-horizontal" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         @include('Template.Components.messages')
                         @if (Session::has('feechallan'))
@@ -66,7 +67,7 @@
                             <div class="col-md-6">
                                 <div class="content-group-lg">
                                     <label>Branch Name</label>
-                                    <select  id="branch" name="branch" class="form-control validate[required] DROPDOWN BRANCH" data-dropdown="BRANCH">
+                                    <select  id="b" name="branch" class="form-control validate[required] DROPDOWN BRANCH" data-dropdown="BRANCH">
                                     </select>
                                 </div>
                             </div>
@@ -90,17 +91,40 @@
                         <div class="panel-body">
                             <div class="row position-right" style="text-align: end; margin: 6px">
                                 <button type="button" class="btn btn-primary {{__('button.reset-reset')}}"><i class="{{__('button.reset-icon')}} {{__('button.reset-class')}} "></i>{{__('button.reset-text')}}</button>
-                                <button type="submit" class="btn btn-primary"><i class="icon-floppy-disk position-left"></i>Search</button>
+                                <button type="button" id="button" class="btn btn-primary"><i class="icon-floppy-disk position-left"></i>Search</button>
                             </div>
                         </div>
                     </form>
                 </div>
+                <div class="tab-pane" id="list">
+                    <table class="table" id="datatables">
+                        <thead>
+                            <tr>
+                                <th>ORG Code</th>
+                                <th>CHALLAN Number</th>
+                                <th>Payment Method</th>
+                                <th>Fee Status</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>
 </div>
 @endsection
 @section('jsheader')
-<script type="text/javascript" src="{{ asset('assets/js/fees/feegenerate.js') }}">
-</script>
+<!-- <script type="text/javascript" src="{{ asset('assets/js/fees/feegenerate.js') }}">
+</script> -->
+<script type="text/javascript" src="{{ asset('assets/js/fees/searchchallan.js') }}"></script>
 @endsection

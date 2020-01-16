@@ -106,6 +106,8 @@ class ApiController extends BaseController
         $class = Input::get("CLASS");
         $RollNo = Input::get("ROLL_NO");
         $branch = Input::get("BRANCH_ID");
+        /*dd($branch);
+        exit();*/
         //return $class;
         if($class != null && $branch != null && $RollNo == null){
             $list = DB::table('adc_students_info_vw')->select('ERP_CODE', 'ROLL_NO', 'STUDENT_NAME','FULL_NAME as FATHER_NAME','BAYFORM_NO','GENDER','STATUS')->where([
@@ -124,6 +126,39 @@ class ApiController extends BaseController
         }
         else{
             $list = DB::table('adc_students_info_vw')->select('ERP_CODE', 'ROLL_NO', 'STUDENT_NAME','FULL_NAME as FATHER_NAME','BAYFORM_NO','GENDER','STATUS')->get();
+        }
+
+        return response()->Json(['list' => $list])->header('Content-Type', 'application/json;');
+}
+
+public function getSearchChallansList()
+{ 
+        $class = Input::get("CLASS");
+        $year = Input::get("YEAR");
+        $month = Input::get("MONTH");
+        $branch = Input::get("BRANCH_ID");
+        /*dd($branch);
+        exit();*/
+        if($class != null && $branch != null && $year == null && $month == null){
+            $list = DB::table('fin_fee_challans')->select('ORG_ID', 'CHALLAN_NO', 'PAYMENT_METHOD','FEE_STATUS')->where([
+                ['BRANCH_ID', '=', $branch],
+                ['YEAR', '=', $year],
+                ['MONTH', '=', $month],
+                ['CLASS', '=', $class]
+            ])->get();/*->toSql(); //->get();
+            dd($list);*/
+        }
+        else if($class != null && $branch != null && $year != null && $month != null){
+            $list = DB::table('fin_fee_challans')->select('ORG_ID', 'CHALLAN_NO', 'PAYMENT_METHOD','FEE_STATUS')->where([
+                ['BRANCH_ID', '=', $branch],
+                ['YEAR', '=', $year],
+                ['MONTH', '=', $month],
+                ['CLASS', '=', $class]
+            ])->get();
+           /* )->orwhere('ROLL_NO', $RollNo)->orwhere([['CLASS', $class]])->get();*/
+        }
+        else{
+            $list = DB::table('fin_fee_challans')->select('ORG_ID', 'CHALLAN_NO', 'PAYMENT_METHOD','FEE_STATUS')->get();
         }
 
         return response()->Json(['list' => $list])->header('Content-Type', 'application/json;');
