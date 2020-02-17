@@ -26,7 +26,7 @@
  * the property of Prosigns Technologies
  */
 
-var commonurl = 'schoolplus';
+var commonurl = "{{ env("APP_URL") }}"
 $(function() {
    /* var form = $( "#DATAFORM" );
     form.validate();*/
